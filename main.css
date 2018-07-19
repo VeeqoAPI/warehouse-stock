@@ -45,5 +45,9 @@ h4 {
     margin: 20px auto;
     width: 60px;
     height: 5px;
+    padding: 5px;
+}
 
+.veeqo-background {
+    background-color: #009aed;
 }

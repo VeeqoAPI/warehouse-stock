@@ -15,7 +15,7 @@
     <meta name="description" content="Veeqo - API Dashboard">
     <meta name="author" content="Phil Reynolds">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Veeqo-Dashboard</title>
+    <title>Veeqo-Warehouse-Stock</title>
 
     <!-- Bootstrap Core CSS -->
     <!-- Latest compiled and minified CSS -->
@@ -120,8 +120,9 @@
         </div><!-- /.row -->
     <?php endif; ?>
 
-        <input class="btn btn-default" type="submit" value="GO" />
-        <button class="btn btn-default" type="submit" formaction="fetch-products.php" form=fetch_warehouse_stock">Click Me!</button>
+        <div class="text-center">
+            <input class="btn btn-default veeqo-background" type="submit" value="Get Products" />
+        </div>
     </form>
 
 
