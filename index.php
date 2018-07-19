@@ -120,7 +120,7 @@
         </div><!-- /.row -->
     <?php endif; ?>
 
-    <button type="submit" formaction="#" form=fetch_warehouse_stock">Click Me!</button>
+    <button class="btn btn-default" type="submit" formaction="#" form=fetch_warehouse_stock">Click Me!</button>
     </form>
 
 
@@ -140,9 +140,6 @@
                                 <p><?= $product['description'] ?></p>
                                 <p>Available Stock: <?= $product['total_available_stock_level'] ?></p>
                                 <p>Allocated Stock: <?= $product['total_allocated_stock_level'] ?></p>
-                                <p>
-                                    <a href="<?= $product['buyUrl'] ?>" class="btn btn-primary">Buy Now!</a> <a href="<?= $product['infoUrl'] ?>" class="btn btn-default">More Info</a>
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -159,7 +156,7 @@
             <div class="col-lg-12">
                 <p>API request took <?= $time ?>s, response
                     size <?= $responseSize ?> bytes</p>
-                <p> &copy; Veeqo 2017 Ltd</p>
+                <p> &copy; Veeqo 2018 Ltd</p>
             </div>
         </div>
     </footer>

@@ -7,7 +7,6 @@ function prepare_products($response) {
     $products = $response;
     foreach ($products as $index => $product) {
         $products[$index] = array_merge([
-            'buyUrl' => '#',
             'infoUrl' => '#'
         ], $product);
     }
@@ -37,7 +36,7 @@ curl_close($ch);
 $response = json_decode($response, true);
 
 $results = [
-    'dashboard' => [],
+    'products' => [],
     'error' => false,
     'time' => $time,
     'responseSize' => $responseSize
@@ -48,7 +47,7 @@ if ($err) {
 } elseif(isset($response['error_messages'])) {
     $results['error'] = "API error: " . $response['error_messages'];
 } else {
-    $results['dashboard'] = prepare_products($response);
+    $results['products'] = prepare_products($response);
 }
 
 return $results;
