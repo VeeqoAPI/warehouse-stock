@@ -121,7 +121,7 @@
     <?php endif; ?>
 
         <div class="text-center">
-            <input class="btn btn-default veeqo-background" type="submit" value="Get Products" />
+            <input class="btn btn-primary veeqo-background" type="submit" value="Get Products" />
         </div>
     </form>
 
