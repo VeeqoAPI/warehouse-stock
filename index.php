@@ -93,35 +93,60 @@
         </div><!-- /.row -->
     <?php endif; ?>
 
+    <?php if(!isset($_POST['warehouse_id']) || ($error)): ?>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <form action="index.php" method="post">
+                    <h2>Enter your API key:</h2>
+                    <input class="form-control input-sm"
+                           type="text"
+                           name="api-key"
+                           value="">
+                </form>
+                <div class="blue-line"></div>
+            </div>
+        </div><!-- /.row -->
+    <?php endif; ?>
+
+    <?php if(isset($_POST['warehouse_id'])): ?>
+
+        <?php $warehouse_id = htmlentities($_POST['warehouse_id']); ?>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <h2>Warehouse ID: </h2>
+                <h3><?php echo $warehouse_id ?></h3>
+            </div>
+            <div class="blue-line"></div>
+        </div><!-- /.row -->
+    <?php endif; ?>
+
 
 
     <?php if ($error): ?>
         <div class="alert alert-danger text-center" role="alert"><?= $error; ?></div>
 
     <?php else: ?>
-        <div class="row">
-            <div class="col-md-3 col-md-offset-3">
-                <div class="box">
-                    <h2>Today</h2>
-                    <?php foreach ($dashboard['today'] as $channel): ?>
-                        <h3>Channel: <strong><?= $channel['channel']['name'] ?></strong></h3>
-                        <h4>Total Sales: <?= $channel['total_sales'] ?></h4>
-                        <h4>Total Profit: <?= $channel['total_profit'] ?></h4>
-                    <?php endforeach; ?>
-                </div> <!--end box-->
-            </div> <!--end col-md-4-->
-
-            <div class="col-md-3">
-                <div class="box">
-                    <h2>Yesterday</h2>
-                    <?php foreach ($dashboard['yesterday'] as $channel): ?>
-                        <h3>Channel: <strong><?= $channel['channel']['name'] ?></strong></h3>
-                        <h4>Total Sales: <?= $channel['total_sales'] ?></h4>
-                        <h4>Total Profit: <?= $channel['total_profit'] ?></h4>
-                    <?php endforeach; ?>
-                </div> <!--end box-->
-            </div> <!--end col-md-4-->
-        </div> <!--end row-->
+        <?php foreach (array_chunk($products, 4) as $group): ?>
+            <div class="row text-center">
+                <?php foreach ($group as $product): ?>
+                    <div class="col-md-3 col-sm-6 hero-feature">
+                        <div class="thumbnail">
+                            <img src="<?= isset($product['image']) ? $product['image'] : 'http://placehold.it/800x500' ?>" alt="">
+                            <div class="caption">
+                                <h3><?= $product['title'] ?></h3>
+                                <p><?= $product['description'] ?></p>
+                                <p>Available Stock: <?= $product['total_available_stock_level'] ?></p>
+                                <p>Allocated Stock: <?= $product['total_allocated_stock_level'] ?></p>
+                                <p>
+                                    <a href="<?= $product['buyUrl'] ?>" class="btn btn-primary">Buy Now!</a> <a href="<?= $product['infoUrl'] ?>" class="btn btn-default">More Info</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <!-- /.row -->
+        <?php endforeach; ?>
     <?php endif; ?>
 
     <hr>

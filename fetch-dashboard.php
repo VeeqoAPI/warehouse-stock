@@ -1,19 +1,22 @@
 <?php
 
 $api_key = htmlentities($_POST['api-key']);
-function prepare_dashboards($response) {
-    $dashboards = $response;
+$warehouse_id = htmlentities($_POST[ 'warehouse_id']);
 
-    foreach ($dashboards as $index => $dashboard) {
-        $dashboards[$index] = array_merge( $dashboard);
+function prepare_products($response) {
+    $products = $response;
+    foreach ($products as $index => $product) {
+        $products[$index] = array_merge([
+            'buyUrl' => '#',
+            'infoUrl' => '#'
+        ], $product);
     }
-
-    return $dashboards;
+    return $products;
 }
 
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.veeqo.com/dashboard");
+curl_setopt($ch, CURLOPT_URL, "https://api.veeqo.com/products?$warehouse_id");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
@@ -45,7 +48,7 @@ if ($err) {
 } elseif(isset($response['error_messages'])) {
     $results['error'] = "API error: " . $response['error_messages'];
 } else {
-    $results['dashboard'] = prepare_dashboards($response);
+    $results['dashboard'] = prepare_products($response);
 }
 
 return $results;
