@@ -88,8 +88,9 @@
             <div class="col-md-6 col-md-offset-3 text-center">
                 <h2>Your API Key: </h2>
                 <h3><?php echo $api_key ?></h3>
+                <div class="blue-line"></div>
             </div>
-            <div class="blue-line"></div>
+
         </div><!-- /.row -->
     <?php endif; ?>
 
@@ -115,8 +116,9 @@
             <div class="col-md-6 col-md-offset-3 text-center">
                 <h2>Warehouse ID: </h2>
                 <h3><?php echo $warehouse_id ?></h3>
+                <div class="blue-line"></div>
             </div>
-            <div class="blue-line"></div>
+
         </div><!-- /.row -->
     <?php endif; ?>
 
