@@ -65,7 +65,7 @@
         </div>
     </div>
 
-    <form id="fetch_warehouse_stock" action="index.php">
+    <form id="fetch_warehouse_stock" action="index.php" method="post">
     <?php if(!isset($_POST['api-key']) || ($error)): ?>
         <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center">
@@ -120,7 +120,8 @@
         </div><!-- /.row -->
     <?php endif; ?>
 
-    <button class="btn btn-default" type="submit" formaction="fetch-products.php" form=fetch_warehouse_stock">Click Me!</button>
+        <input class="btn btn-default" type="submit" value="GO" />
+        <button class="btn btn-default" type="submit" formaction="fetch-products.php" form=fetch_warehouse_stock">Click Me!</button>
     </form>
 
 
