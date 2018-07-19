@@ -1,4 +1,4 @@
-<?php extract(require('fetch-dashboard.php')); ?>
+<?php extract(require('fetch-products.php')); ?>
 <!--/**
  * Created by PhpStorm.
  * User: philr
@@ -120,7 +120,7 @@
         </div><!-- /.row -->
     <?php endif; ?>
 
-    <button class="btn btn-default" type="submit" formaction="#" form=fetch_warehouse_stock">Click Me!</button>
+    <button class="btn btn-default" type="submit" formaction="fetch-products.php" form=fetch_warehouse_stock">Click Me!</button>
     </form>
 
 
