@@ -65,7 +65,7 @@
         </div>
     </div>
 
-    <form id="fetch_warehouse_stock">
+    <form id="fetch_warehouse_stock" action="index.php">
     <?php if(!isset($_POST['api-key']) || ($error)): ?>
         <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center">
