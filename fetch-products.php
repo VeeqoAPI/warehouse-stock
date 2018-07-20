@@ -41,7 +41,7 @@ curl_close($ch);
 
 $response = json_decode($response, true);
 $body = json_decode($body,true);
-$headers_arr = explode("\r\n", $headers);
+$headers_arr = http_parse_headers($headers);
 
 //$headerData = $response[0];
 
