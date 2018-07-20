@@ -14,6 +14,9 @@ function prepare_products($response) {
     return $products;
 }
 
+
+// CURL Request
+
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, "https://api.veeqo.com/products?warehouse_id=".$warehouse_id."&page_size=100");
@@ -36,7 +39,7 @@ $err = curl_error($ch);
 curl_close($ch);
 
 $response = json_decode($response, true);
-echo ($response['error_messages']);
+echo ("\nLine 39: ".$response['error_messages']);
 
 $results = [
     'products' => [],
