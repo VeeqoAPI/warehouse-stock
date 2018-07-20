@@ -71,8 +71,8 @@ $err = curl_error($ch);
 
 curl_close($ch);
 
-
-echo ("\n\nWarehouseResponse: ".$warehouseResponse);
+$warehouse = json_decode($warehouseResponse, true);
+echo ("\n\nWarehouse: ".$warehouse);
 echo ("\n\nWarehouseRes[name]: ".$warehouseResponse['name']);
 
 
