@@ -41,13 +41,14 @@ curl_close($ch);
 
 $response = json_decode($response, true);
 $body = json_decode($body,true);
+$headers_arr = explode("\r\n", $headers);
 
 //$headerData = $response[0];
 
-echo ("\n\nBody: ".$body);
 echo ("\n\nHeader: ".$headers);
-echo ("\n\nResponse[9]: ".$headers[9]);
-echo ("\n\nX-Total-Count: ".$headers['X-Total-Count']);
+echo ("\n\nHeaderArr: ".$headers_arr);
+echo ("\n\nResponse[9]: ".$headers_arr[9]);
+echo ("\n\nX-Total-Count: ".$headers_arr['X-Total-Count']);
 
 $results = [
     'products' => [],
