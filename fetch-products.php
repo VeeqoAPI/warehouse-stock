@@ -36,16 +36,16 @@ $responseCode = curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
 $err = curl_error($ch);
 
 curl_close($ch);
-
+echo ("\nResponse: ".$response[0]);
 $response = json_decode($response, true);
 $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
 $headers = substr($response, 0, $header_size);
 $body = substr($response, $header_size);
-$headerData = $headerInfo[0];
+$headerData = $response[0];
 
 echo ("\nHeaderInfo: ".$headerInfo['x-total-count']);
 echo ("\nHeader: ".$headerData);
-echo ("\nResponse: ".$response);
+echo ("\nResponse: ".$response[0]);
 
 $results = [
     'products' => [],
