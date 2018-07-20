@@ -42,7 +42,6 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 ));
 $warehouseResponse = curl_exec($ch);
 
-
 curl_close($ch);
 
 
@@ -72,16 +71,11 @@ $err = curl_error($ch);
 curl_close($ch);
 
 $warehouse = json_decode($warehouseResponse, true);
-echo ("\n\nWarehouse: ".$warehouse);
-echo ("\n\nWarehouse[name]: ".$warehouse['name']);
-
-
-echo ("\n\nBody: ".$body);
 $response = json_decode($response, true);
 $body = json_decode($body,true);
 $headers_arr = http_parse_headers($headers);
 
-echo ("\n\nBody[0][title]: ".$body[0]['title']);
+//echo ("\n\nBody[0][title]: ".$body[0]['title']);
 //echo ("\n\nX-Total-Count: ".$headers_arr['X-Total-Count']);
 
 $results = [
