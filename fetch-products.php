@@ -35,13 +35,14 @@ $responseCode = curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
 
 $err = curl_error($ch);
 
-$headerInfo = curl_getinfo($ch);
-
 curl_close($ch);
 
+
+$headerInfo = explode("\n",$response);
 $response = json_decode($response, true);
-$headerData = substr($response, 0, $headerInfo['header_size']);
-echo ($headerData);
+$headerData = $headerInfo[0];
+echo ("Header: ".$headerData);
+echo ("HeaderInfo: ".$headerInfo);
 
 
 $results = [
