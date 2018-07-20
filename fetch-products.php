@@ -36,7 +36,7 @@ $responseCode = curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
 $err = curl_error($ch);
 
 curl_close($ch);
-echo ("\nResponse: ".$response[0]);
+echo ("\nResponse: ".$response);
 $response = json_decode($response, true);
 $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
 $headers = substr($response, 0, $header_size);
