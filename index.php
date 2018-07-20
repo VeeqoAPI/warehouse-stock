@@ -142,7 +142,7 @@
                             <img src="<?= isset($product['image']) ? $product['image'] : 'http://placehold.it/800x500' ?>" alt="">
                             <div class="caption">
                                 <h3><?= $product['title'] ?></h3>
-                                <p><?= $product['description'] ?></p>
+<!--                                <p>--><?//= $product['description'] ?><!--</p>-->
                                 <p>Available Stock: <?= $product['total_available_stock_level'] ?></p>
                                 <p>Allocated Stock: <?= $product['total_allocated_stock_level'] ?></p>
                             </div>

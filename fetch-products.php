@@ -5,6 +5,8 @@ $api_key = htmlentities($_POST['api-key']);
 $warehouse_id = htmlentities($_POST[ 'warehouse_id']);
 echo('Line 6' . $warehouse_id);
 
+
+
 function prepare_products($response) {
     $products = $response;
     foreach ($products as $index => $product) {
@@ -44,7 +46,12 @@ $results = [
     'responseSize' => $responseSize
 ];
 
-if ($err) {
+if (!isset($warehouse_id)){
+    $results = [
+        'error' => "No Warehouse ID",
+        'products' => []
+    ];
+} elseif ($err) {
     $results['error'] = "cURL Error #:" . $err ;
 } elseif(isset($response['error_messages'])) {
     $results['error'] = "API error: " . $response['error_messages'];
