@@ -17,7 +17,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="880">
+            <state relative-caret-position="418">
               <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
             </state>
           </provider>
@@ -26,8 +26,8 @@
       <file leaf-file-name="fetch-products.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fetch-products.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+            <state relative-caret-position="550">
+              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
             </state>
           </provider>
         </entry>
@@ -114,12 +114,12 @@
       <option name="presentableId" value="Default" />
       <updated>1532009184123</updated>
       <workItem from="1532009186968" duration="3773000" />
-      <workItem from="1532101515424" duration="4651000" />
+      <workItem from="1532101515424" duration="4933000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26823000" />
+    <option name="totallyTimeSpent" value="27105000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="88" y="-2" width="2793" height="1623" extended-state="6" />
@@ -224,15 +224,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
+        <state relative-caret-position="418">
           <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fetch-products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+        <state relative-caret-position="550">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
         </state>
       </provider>
     </entry>
