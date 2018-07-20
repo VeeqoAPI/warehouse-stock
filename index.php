@@ -149,8 +149,9 @@
                             <div class="caption">
                                 <h3><?= $product['title'] ?></h3>
 <!--                                <p>--><?//= $product['description'] ?><!--</p>-->
-                                <p>Available Stock: <?= $product['total_available_stock_level'] ?></p>
-                                <p>Allocated Stock: <?= $product['total_allocated_stock_level'] ?></p>
+                                <p>Total Available Stock: <?= $product['total_available_stock_level'] ?></p>
+                                <p>Total Allocated Stock: <?= $product['total_allocated_stock_level'] ?></p>
+                                <p><strong>NOTE: Stock values are from all warehouses.</strong></p>
                             </div>
                         </div>
                     </div>
