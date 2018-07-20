@@ -45,17 +45,27 @@ $results = [
     'responseCode' => $responseCode
 ];
 
+// Error Handling
+// TODO refactor this mess
+
 if ($warehouse_id == null){
-    $results = [
-        'error' => "No Warehouse ID",
-        'products' => []
-    ];
+    if ($responseCode != '200'){
+        $results = [
+            'error' => "No Warehouse ID",
+            'products' => []
+        ];
+    } else {
+        $results = [
+            'error' => "API error: " .$responseCode. $response['error_messages'],
+            'products' => []
+        ];
+    }
 } elseif ($err) {
     $results['error'] = "cURL Error #:" . $err ;
 } elseif(isset($response['error_messages'])) {
-    $results['error'] = "API error: " . $response['error_messages'];
+    $results['error'] = "API error: " .$responseCode." ". $response['error_messages'];
 } elseif($responseCode != '200'){
-    $results['error'] = "API error: " . $response['error_messages'];
+    $results['error'] = "API error: " .$responseCode." ". $response['error_messages'];
 } else {
     $results['products'] = prepare_products($response);
 
