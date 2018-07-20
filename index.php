@@ -127,7 +127,7 @@
 
             <?php if(isset($_POST['warehouse_id']) && isset($_POST['api-key']) && (!$error)): ?>
             <div class="text-center">
-                <input class="btn btn-success" type="button" value="Refresh Page" onclick="refreshPage()" />
+                <input class="btn btn-success" type="button" value="Refresh Page" onclick="window.location.reload(forceGet)" />
                 <input class="btn btn-danger" type="submit" value="Clear Values" />
             </div>
             <?php endif; ?>
@@ -175,11 +175,6 @@
     </footer>
 </div>
 <!-- /.container -->
-<script>
-    function refreshPage() {
-        location.reload(forceGet);
-    }
-</script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
