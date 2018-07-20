@@ -41,9 +41,9 @@ curl_close($ch);
 $headerInfo = explode("\n",$response);
 $response = json_decode($response, true);
 $headerData = $headerInfo[0];
-echo ("Header: ".$headerData);
-echo ("HeaderInfo: ".$headerInfo);
 
+echo ("\nHeaderInfo: ".$headerInfo['x-total-count']);
+echo ("\nHeader: ".$headerData);
 
 $results = [
     'products' => [],

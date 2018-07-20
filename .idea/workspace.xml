@@ -31,8 +31,8 @@
       <file leaf-file-name="fetch-products.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fetch-products.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="40" column="53" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
+            <state relative-caret-position="439">
+              <caret line="44" column="35" lean-forward="true" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -123,7 +123,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16783000" />
+    <option name="totallyTimeSpent" value="17279000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="442" y="-11" width="2497" height="1452" extended-state="6" />
@@ -226,8 +226,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fetch-products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="40" column="53" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
+        <state relative-caret-position="439">
+          <caret line="44" column="35" lean-forward="true" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="36" />
         </state>
       </provider>
     </entry>
