@@ -79,7 +79,7 @@
                             <input class="form-control input-sm"
                                    type="text"
                                    name="api-key"
-                                   value="">
+                                   value="<?php if(isset($_POST['api-key']) && (!$error)): ?><?php echo $api_key ?><?php endif; ?> ">
                         <!--</form>-->
                         <div class="blue-line"></div>
                     </div>
@@ -106,7 +106,7 @@
                             <input class="form-control input-sm"
                                    type="text"
                                    name="warehouse_id"
-                                   value="">
+                                   value="<?php if(isset($_POST['warehouse_id']) && (!$error)): ?><?php echo $warehouse_id ?><?php endif; ?> ">
                         <!--</form>-->
                         <div class="blue-line"></div>
                     </div>
