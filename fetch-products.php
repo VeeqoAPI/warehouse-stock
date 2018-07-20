@@ -44,8 +44,7 @@ $warehouseResponse = curl_exec($ch);
 
 
 curl_close($ch);
-$warehouse = json_decode($warehouseResponse);
-//echo ($warehouse['name']);
+
 
 // CURL Request for products
 
@@ -71,6 +70,10 @@ $body = substr($response, $header_size);
 $err = curl_error($ch);
 
 curl_close($ch);
+
+
+$warehouse = json_decode($warehouseResponse);
+echo ("\n\nBody: ".$warehouseResponse);
 
 //echo ("\n\nBody: ".$body);
 $response = json_decode($response, true);
