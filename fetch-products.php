@@ -46,7 +46,7 @@ $results = [
     'responseSize' => $responseSize
 ];
 
-if (!isset($warehouse_id)){
+if (!$warehouse_id){
     $results = [
         'error' => "No Warehouse ID",
         'products' => []
