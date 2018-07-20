@@ -65,8 +65,8 @@
         </div>
     </div>
 
-    <?php $api_key = htmlentities($_POST['api-key']); ?>
-    <?php $warehouse_id = htmlentities($_POST['warehouse_id']); ?>
+    <?php //$api_key = htmlentities($_POST['api-key']); ?>
+    <?php //$warehouse_id = htmlentities($_POST['warehouse_id']); ?>
     <?php echo("\nLine 70: ". $warehouse_id); ?>
 
         <form id="fetch_warehouse_stock" action="index.php" method="post">
@@ -79,11 +79,12 @@
                             <input class="form-control input-sm"
                                    type="text"
                                    name="api-key"
-                                   value="<?php echo htmlspecialchars($api_key); ?>">
+                                   value="">
                         <!--</form>-->
                         <div class="blue-line"></div>
                     </div>
                 </div><!-- /.row -->
+                <?php $api_key = htmlentities($_POST['api-key']); ?>
             <?php endif; ?>
 
             <?php if(isset($_POST['api-key']) && (!$error)): ?>
@@ -96,6 +97,7 @@
                     </div>
 
                 </div><!-- /.row -->
+                <?php $api_key = ($_POST['api-key']); ?>
             <?php endif; ?>
 
             <?php if(!isset($_POST['warehouse_id']) || ($error)): ?>
@@ -106,11 +108,12 @@
                             <input class="form-control input-sm"
                                    type="text"
                                    name="warehouse_id"
-                                   value="<?php echo htmlspecialchars($warehouse_id); ?>">
+                                   value="">
                         <!--</form>-->
                         <div class="blue-line"></div>
                     </div>
                 </div><!-- /.row -->
+                <?php $warehouse_id = htmlentities($_POST['warehouse_id']); ?>
             <?php endif; ?>
 
             <?php if(isset($_POST['warehouse_id']) && (!$error)): ?>
@@ -122,6 +125,7 @@
                     </div>
 
                 </div><!-- /.row -->
+                <?php $warehouse_id = ($_POST['warehouse_id']); ?>
             <?php endif; ?>
 
             <div class="text-center">
