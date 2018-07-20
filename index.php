@@ -65,8 +65,8 @@
         </div>
     </div>
 
-    <?php //$api_key = htmlentities($_POST['api-key']); ?>
-    <?php //$warehouse_id = htmlentities($_POST['warehouse_id']); ?>
+    <?php $api_key = htmlentities($_POST['api-key']); ?>
+    <?php $warehouse_id = htmlentities($_POST['warehouse_id']); ?>
     <?php echo("\nLine 70: ". $warehouse_id); ?>
 
         <form id="fetch_warehouse_stock" action="index.php" method="post">
@@ -84,7 +84,6 @@
                         <div class="blue-line"></div>
                     </div>
                 </div><!-- /.row -->
-                <?php $api_key = htmlentities($_POST['api-key']); ?>
             <?php endif; ?>
 
             <?php if(isset($_POST['api-key']) && (!$error)): ?>
@@ -97,7 +96,6 @@
                     </div>
 
                 </div><!-- /.row -->
-                <?php $api_key = ($_POST['api-key']); ?>
             <?php endif; ?>
 
             <?php if(!isset($_POST['warehouse_id']) || ($error)): ?>
@@ -113,7 +111,6 @@
                         <div class="blue-line"></div>
                     </div>
                 </div><!-- /.row -->
-                <?php $warehouse_id = htmlentities($_POST['warehouse_id']); ?>
             <?php endif; ?>
 
             <?php if(isset($_POST['warehouse_id']) && (!$error)): ?>
@@ -125,7 +122,6 @@
                     </div>
 
                 </div><!-- /.row -->
-                <?php $warehouse_id = ($_POST['warehouse_id']); ?>
             <?php endif; ?>
 
             <div class="text-center">
