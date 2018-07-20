@@ -45,6 +45,7 @@ $headerData = $headerInfo[0];
 
 echo ("\nHeaderInfo: ".$headerInfo['x-total-count']);
 echo ("\nHeader: ".$headerData);
+echo ("\nResponse: ".$response);
 
 $results = [
     'products' => [],
@@ -68,18 +69,18 @@ if ($warehouse_id == null){
         ];
     } else {
         $results = [
-            'error' => "API error: " .$responseCode." ". $body['error_messages'],
+            'error' => "API error: " .$responseCode." ". $response['error_messages'],
             'products' => []
         ];
     }
 } elseif ($err) {
     $results['error'] = "cURL Error #:" . $err ;
-} elseif(isset($body['error_messages'])) {
-    $results['error'] = "API error: " .$responseCode." ". $body['error_messages'];
+} elseif(isset($response['error_messages'])) {
+    $results['error'] = "API error: " .$responseCode." ". $response['error_messages'];
 } elseif($responseCode != '200'){
-    $results['error'] = "API error: " .$responseCode." ". $body['error_messages'];
+    $results['error'] = "API error: " .$responseCode." ". $response['error_messages'];
 } else {
-    $results['products'] = prepare_products($body);
+    $results['products'] = prepare_products($response);
 
 }
 
