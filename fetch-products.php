@@ -2,7 +2,6 @@
 
 $api_key = htmlentities($_POST['api-key']);
 $warehouse_id = htmlentities($_POST[ 'warehouse_id']);
-echo ("\nLine5: ".$warehouse_id);
 
 function prepare_products($response) {
     $products = $response;
@@ -39,7 +38,6 @@ $err = curl_error($ch);
 curl_close($ch);
 
 $response = json_decode($response, true);
-echo ("\nLine 39: ".$response['error_messages']);
 
 $results = [
     'products' => [],
