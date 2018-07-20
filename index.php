@@ -65,67 +65,69 @@
         </div>
     </div>
 
-    <form id="fetch_warehouse_stock" action="index.php" method="post">
-    <?php if(!isset($_POST['api-key']) || ($error)): ?>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center">
-                <!--<form>-->
-                    <h2>Enter your API key:</h2>
-                    <input class="form-control input-sm"
-                           type="text"
-                           name="api-key"
-                           value="">
-                <!--</form>-->
-                <div class="blue-line"></div>
+    <?php $api_key = htmlentities($_POST['api-key']); ?>
+    <?php $warehouse_id = htmlentities($_POST['warehouse_id']); ?>
+
+        <form id="fetch_warehouse_stock" action="index.php" method="post">
+            <?php if(!isset($_POST['api-key']) || ($error)): ?>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <!--<form>-->
+                            <h2>Enter your API key:</h2>
+                            <input class="form-control input-sm"
+                                   type="text"
+                                   name="api-key"
+                                   value="">
+                        <!--</form>-->
+                        <div class="blue-line"></div>
+                    </div>
+                </div><!-- /.row -->
+            <?php endif; ?>
+
+            <?php if(isset($_POST['api-key'])): ?>
+
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <h2>Your API Key: </h2>
+                        <h3><?php echo $api_key ?></h3>
+                        <div class="blue-line"></div>
+                    </div>
+
+                </div><!-- /.row -->
+            <?php endif; ?>
+
+            <?php if(!isset($_POST['warehouse_id']) || ($error)): ?>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <!--<form>-->
+                            <h2>Enter Warehouse ID:</h2>
+                            <input class="form-control input-sm"
+                                   type="text"
+                                   name="warehouse_id"
+                                   value="">
+                        <!--</form>-->
+                        <div class="blue-line"></div>
+                    </div>
+                </div><!-- /.row -->
+            <?php endif; ?>
+
+            <?php if(isset($_POST['warehouse_id'])): ?>
+
+
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <h2>Warehouse ID: </h2>
+                        <h3><?php echo $warehouse_id ?></h3>
+                        <div class="blue-line"></div>
+                    </div>
+
+                </div><!-- /.row -->
+            <?php endif; ?>
+
+            <div class="text-center">
+                <input class="btn btn-primary veeqo-background" type="submit" value="Get Products" />
             </div>
-        </div><!-- /.row -->
-    <?php endif; ?>
-
-    <?php if(isset($_POST['api-key'])): ?>
-
-        <?php $api_key = htmlentities($_POST['api-key']); ?>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center">
-                <h2>Your API Key: </h2>
-                <h3><?php echo $api_key ?></h3>
-                <div class="blue-line"></div>
-            </div>
-
-        </div><!-- /.row -->
-    <?php endif; ?>
-
-    <?php if(!isset($_POST['warehouse_id']) || ($error)): ?>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center">
-                <!--<form>-->
-                    <h2>Enter Warehouse ID:</h2>
-                    <input class="form-control input-sm"
-                           type="text"
-                           name="warehouse_id"
-                           value="">
-                <!--</form>-->
-                <div class="blue-line"></div>
-            </div>
-        </div><!-- /.row -->
-    <?php endif; ?>
-
-    <?php if(isset($_POST['warehouse_id'])): ?>
-
-        <?php $warehouse_id = htmlentities($_POST['warehouse_id']); ?>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center">
-                <h2>Warehouse ID: </h2>
-                <h3><?php echo $warehouse_id ?></h3>
-                <div class="blue-line"></div>
-            </div>
-
-        </div><!-- /.row -->
-    <?php endif; ?>
-
-        <div class="text-center">
-            <input class="btn btn-primary veeqo-background" type="submit" value="Get Products" />
-        </div>
-    </form>
+        </form>
 
 
 
