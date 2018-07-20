@@ -72,7 +72,6 @@ $err = curl_error($ch);
 curl_close($ch);
 
 
-$warehouse = json_decode($warehouseResponse);
 echo ("\n\nWarehouseResponse: ".$warehouseResponse);
 echo ("\n\nWarehouseRes[name]: ".$warehouseResponse['name']);
 
@@ -82,7 +81,7 @@ $response = json_decode($response, true);
 $body = json_decode($body,true);
 $headers_arr = http_parse_headers($headers);
 
-echo ("\n\nBody[0]: ".$body[0]);
+echo ("\n\nBody[0][title]: ".$body[0]['title']);
 //echo ("\n\nX-Total-Count: ".$headers_arr['X-Total-Count']);
 
 $results = [
