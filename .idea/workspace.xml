@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74a9fc7a-ccd0-43b1-a1c9-0c9015d0e2bd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/fetch-products.php" beforeDir="false" afterPath="$PROJECT_DIR$/fetch-products.php" afterDir="false" />
-    </list>
+    <list default="true" id="74a9fc7a-ccd0-43b1-a1c9-0c9015d0e2bd" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,8 +26,8 @@
       <file leaf-file-name="fetch-products.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fetch-products.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="880">
-              <caret line="82" selection-start-line="82" selection-end-line="82" />
+            <state relative-caret-position="748">
+              <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -116,16 +114,15 @@
       <option name="presentableId" value="Default" />
       <updated>1532009184123</updated>
       <workItem from="1532009186968" duration="3773000" />
-      <workItem from="1532101515424" duration="4268000" />
+      <workItem from="1532101515424" duration="4651000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26440000" />
+    <option name="totallyTimeSpent" value="26823000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="88" y="-2" width="2793" height="1623" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -234,8 +231,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fetch-products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
+        <state relative-caret-position="748">
+          <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
         </state>
       </provider>
     </entry>

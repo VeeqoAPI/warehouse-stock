@@ -74,7 +74,7 @@ curl_close($ch);
 
 $warehouse = json_decode($warehouseResponse);
 echo ("\n\nWarehouseResponse: ".$warehouseResponse);
-echo ("\n\nWarehouse[0]: ".$warehouse[0]);
+//echo ("\n\nWarehouse[0]: ".$warehouse[0]);
 
 
 echo ("\n\nBody: ".$body);
