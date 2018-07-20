@@ -73,14 +73,14 @@ curl_close($ch);
 
 
 $warehouse = json_decode($warehouseResponse);
-echo ("\n\nBody: ".$warehouseResponse);
+echo ("\n\nWarehouseResponse: ".$warehouseResponse);
 
-//echo ("\n\nBody: ".$body);
+echo ("\n\nBody: ".$body);
 $response = json_decode($response, true);
 $body = json_decode($body,true);
 $headers_arr = http_parse_headers($headers);
 
-//echo ("\n\nBody: ".$body[0]);
+echo ("\n\nBody[0]: ".$body[0]);
 //echo ("\n\nX-Total-Count: ".$headers_arr['X-Total-Count']);
 
 $results = [
