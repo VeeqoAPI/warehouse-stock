@@ -67,7 +67,6 @@
 
     <?php $api_key = htmlentities($_POST['api-key']); ?>
     <?php $warehouse_id = htmlentities($_POST['warehouse_id']); ?>
-    <?php echo("\nLine 70: ". $warehouse_id); ?>
 
         <form id="fetch_warehouse_stock" action="index.php" method="post">
 
@@ -127,7 +126,7 @@
             <div class="text-center">
                 <input class="btn btn-primary veeqo-background" type="submit" value="Get Products" />
             </div>
-            <?php echo("\nLine 130: ". $warehouse_id); ?>
+
         </form>
 
 
