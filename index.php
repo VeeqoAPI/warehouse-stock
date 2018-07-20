@@ -112,7 +112,7 @@
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3 text-center">
                         <h2>Warehouse Name: </h2>
-                        <h3><?php echo $warehouse['name'] ?></h3>
+                        <h3><?= $warehouse['name'] ?></h3>
                         <div class="blue-line"></div>
                     </div>
 
