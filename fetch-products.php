@@ -45,7 +45,7 @@ $warehouseResponse = curl_exec($ch);
 
 curl_close($ch);
 $warehouse = json_decode($warehouseResponse);
-
+echo ($warehouse);
 
 // CURL Request for products
 
