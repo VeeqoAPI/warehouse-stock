@@ -28,20 +28,20 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 ));
 
 $response = curl_exec($ch);
-
 $responseSize = curl_getinfo($ch, CURLINFO_SIZE_DOWNLOAD);
 $time = curl_getinfo($ch, CURLINFO_TOTAL_TIME);
 $responseCode = curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
 $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
-
+$headers = substr($response, 0, $header_size);
+$body = substr($response, $header_size);
 
 $err = curl_error($ch);
 
 curl_close($ch);
 
 $response = json_decode($response, true);
-$headers = substr($response, 0, $header_size);
-$body = substr($response, $header_size);
+$body = json_decode($body,true);
+
 //$headerData = $response[0];
 
 echo ("\n\nBody: ".$body);
