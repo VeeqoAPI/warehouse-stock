@@ -50,7 +50,7 @@ $results = [
 // TODO refactor this mess
 
 if ($warehouse_id == null){
-    if ($responseCode != '200'){
+    if ($responseCode == '200'){
         $results = [
             'error' => "No Warehouse ID",
             'products' => []
