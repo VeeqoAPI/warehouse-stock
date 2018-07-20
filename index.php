@@ -127,7 +127,7 @@
 
             <?php if(isset($_POST['warehouse_id']) && isset($_POST['api-key']) && (!$error)): ?>
             <div class="text-center">
-                <input class="btn btn-success" type="button" value="Refresh Page" onclick="window.location.reload(forceGet)" />
+                <input class="btn btn-success" type="button" value="Refresh Page" onclick="window.location.reload(true)" />
                 <input class="btn btn-danger" type="submit" value="Clear Values" />
             </div>
             <?php endif; ?>
