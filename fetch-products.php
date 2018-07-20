@@ -20,7 +20,7 @@ $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, "https://api.veeqo.com/products?warehouse_id=".$warehouse_id."&page_size=100");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
+curl_setopt($ch, CURLOPT_HEADER, TRUE);
 
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     "Content-Type: application/json",
@@ -37,9 +37,10 @@ $err = curl_error($ch);
 
 curl_close($ch);
 
-
-$headerInfo = explode("\n",$response);
 $response = json_decode($response, true);
+$header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+$headers = substr($response, 0, $header_size);
+$body = substr($response, $header_size);
 $headerData = $headerInfo[0];
 
 echo ("\nHeaderInfo: ".$headerInfo['x-total-count']);
@@ -67,18 +68,18 @@ if ($warehouse_id == null){
         ];
     } else {
         $results = [
-            'error' => "API error: " .$responseCode." ". $response['error_messages'],
+            'error' => "API error: " .$responseCode." ". $body['error_messages'],
             'products' => []
         ];
     }
 } elseif ($err) {
     $results['error'] = "cURL Error #:" . $err ;
-} elseif(isset($response['error_messages'])) {
-    $results['error'] = "API error: " .$responseCode." ". $response['error_messages'];
+} elseif(isset($body['error_messages'])) {
+    $results['error'] = "API error: " .$responseCode." ". $body['error_messages'];
 } elseif($responseCode != '200'){
-    $results['error'] = "API error: " .$responseCode." ". $response['error_messages'];
+    $results['error'] = "API error: " .$responseCode." ". $body['error_messages'];
 } else {
-    $results['products'] = prepare_products($response);
+    $results['products'] = prepare_products($body);
 
 }
 
