@@ -2,6 +2,7 @@
 
 $api_key = htmlentities($_POST['api-key']);
 $warehouse_id = htmlentities($_POST[ 'warehouse_id']);
+echo ("\nLine5: ".$warehouse_id);
 
 function prepare_products($response) {
     $products = $response;
@@ -56,7 +57,7 @@ if ($warehouse_id == null){
         ];
     } else {
         $results = [
-            'error' => "API error: " .$responseCode. $response['error_messages'],
+            'error' => "API error: " .$responseCode." ". $response['error_messages'],
             'products' => []
         ];
     }
