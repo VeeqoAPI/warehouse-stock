@@ -38,7 +38,8 @@ $err = curl_error($ch);
 curl_close($ch);
 
 $response = json_decode($response, true);
-echo ($response);
+echo ($header_data);
+
 
 $results = [
     'products' => [],
@@ -47,6 +48,9 @@ $results = [
     'responseSize' => $responseSize,
     'responseCode' => $responseCode
 ];
+
+
+
 
 // Error Handling
 // TODO refactor this mess
