@@ -159,8 +159,10 @@
     <footer class="text-center">
         <div class="row">
             <div class="col-lg-12">
+                <p>Stats for Geeks</p>
                 <p>API request took <?= $time ?>s, response
                     size <?= $responseSize ?> bytes</p>
+                <p>API Reponse Code <?= $responseCode ?></p>
                 <p> &copy; Veeqo 2018 Ltd</p>
             </div>
         </div>

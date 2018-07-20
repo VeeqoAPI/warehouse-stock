@@ -28,6 +28,7 @@ $response = curl_exec($ch);
 
 $responseSize = curl_getinfo($ch, CURLINFO_SIZE_DOWNLOAD);
 $time = curl_getinfo($ch, CURLINFO_TOTAL_TIME);
+$responseCode = curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
 
 $err = curl_error($ch);
 
@@ -40,7 +41,8 @@ $results = [
     'products' => [],
     'error' => false,
     'time' => $time,
-    'responseSize' => $responseSize
+    'responseSize' => $responseSize,
+    'responseCode' => $responseCode
 ];
 
 if ($warehouse_id == null){
@@ -52,7 +54,11 @@ if ($warehouse_id == null){
     $results['error'] = "cURL Error #:" . $err ;
 } elseif(isset($response['error_messages'])) {
     $results['error'] = "API error: " . $response['error_messages'];
-} else {
+}
+//elseif($responseCode != ){
+//
+//}
+else {
     $results['products'] = prepare_products($response);
 }
 
