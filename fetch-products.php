@@ -35,7 +35,7 @@ $err = curl_error($ch);
 curl_close($ch);
 
 $response = json_decode($response, true);
-echo ($response);
+echo ($response['error_messages']);
 
 $results = [
     'products' => [],
@@ -54,12 +54,11 @@ if ($warehouse_id == null){
     $results['error'] = "cURL Error #:" . $err ;
 } elseif(isset($response['error_messages'])) {
     $results['error'] = "API error: " . $response['error_messages'];
-}
-//elseif($responseCode != ){
-//
-//}
-else {
+} elseif($responseCode != '200'){
+    $results['error'] = "API error: " . $response['error_messages'];
+} else {
     $results['products'] = prepare_products($response);
+
 }
 
 return $results;
