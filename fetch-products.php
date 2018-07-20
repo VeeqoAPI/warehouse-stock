@@ -17,10 +17,7 @@ function prepare_products($response) {
 
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.veeqo.com/products?".$warehouse_id."&page_size=100");
-echo('<br>Line 21: ' . $ch);
-echo('<br>Line 22: ' . CURLOPT_URL);
-echo('<br>Line 22: ' . $warehouse_id);
+curl_setopt($ch, CURLOPT_URL, "https://api.veeqo.com/products?warehouse_id=".$warehouse_id."&page_size=100");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
