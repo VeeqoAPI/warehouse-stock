@@ -29,7 +29,25 @@ function http_parse_headers($header) {
     return $retVal;
 }
 
-// CURL Request
+// CURL Request for Warehouse name
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "https://api.veeqo.com/warehouses/$warehouse_id");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+curl_setopt($ch, CURLOPT_HEADER, FALSE);
+
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    "Content-Type: application/json",
+    "x-api-key: $api_key"
+));
+$warehouseResponse = curl_exec($ch);
+
+
+curl_close($ch);
+$warehouse = json_decode($warehouseResponse);
+
+
+// CURL Request for products
 
 $ch = curl_init();
 
