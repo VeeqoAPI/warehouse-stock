@@ -12,6 +12,7 @@ function prepare_products($response) {
     }
     return $products;
 }
+
 function http_parse_headers($header) {
     $retVal = array();
     $fields = explode("\r\n", preg_replace('/\x0D\x0A[\x09\x20]+/', ' ', $header));
@@ -57,11 +58,7 @@ $response = json_decode($response, true);
 $body = json_decode($body,true);
 $headers_arr = http_parse_headers($headers);
 
-//$headerData = $response[0];
-
-echo ("\n\nHeader: ".$headers);
-echo ("\n\nHeaderArr: ".$headers_arr);
-echo ("\n\nResponse[9]: ".$headers_arr[9]);
+echo ("\n\nBody: ".$body);
 echo ("\n\nX-Total-Count: ".$headers_arr['X-Total-Count']);
 
 $results = [
@@ -98,7 +95,6 @@ if ($warehouse_id == null){
     $results['error'] = "API error: " .$responseCode." ". $body['error_messages'];
 } else {
     $results['products'] = prepare_products($body);
-
 }
 
 return $results;

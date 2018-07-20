@@ -51,3 +51,7 @@ h4 {
 .veeqo-background {
     background-color: #009aed;
 }
+
+.alert {
+    margin: 5px;
+}
