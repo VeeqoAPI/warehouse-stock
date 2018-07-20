@@ -1,9 +1,9 @@
 <?php
 
-echo($warehouse_id);
+echo('Line 2' . $warehouse_id);
 $api_key = htmlentities($_POST['api-key']);
 $warehouse_id = htmlentities($_POST[ 'warehouse_id']);
-echo($warehouse_id);
+echo('Line 6' . $warehouse_id);
 
 function prepare_products($response) {
     $products = $response;

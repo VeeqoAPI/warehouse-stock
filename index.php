@@ -67,6 +67,7 @@
 
     <?php $api_key = htmlentities($_POST['api-key']); ?>
     <?php $warehouse_id = htmlentities($_POST['warehouse_id']); ?>
+    Line 70: <?php echo($warehouse_id); ?>
 
         <form id="fetch_warehouse_stock" action="index.php" method="post">
             <?php if(!isset($_POST['api-key']) || ($error)): ?>
@@ -112,8 +113,6 @@
             <?php endif; ?>
 
             <?php if(isset($_POST['warehouse_id'])): ?>
-
-
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3 text-center">
                         <h2>Warehouse ID: </h2>
