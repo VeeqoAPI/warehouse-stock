@@ -55,6 +55,8 @@ if ($warehouse_id == null){
     $results['error'] = "cURL Error #:" . $err ;
 } elseif(isset($response['error_messages'])) {
     $results['error'] = "API error: " . $response['error_messages'];
+} elseif ($results['products'] == null){
+    $results['error'] = "No Products Found" ;
 } else {
     $results['products'] = prepare_products($response);
 }
