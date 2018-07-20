@@ -73,13 +73,11 @@
             <?php if(!isset($_POST['api-key']) || ($error)): ?>
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3 text-center">
-                        <!--<form>-->
                             <h2>Enter your API key:</h2>
                             <input class="form-control input-sm"
                                    type="text"
                                    name="api-key"
                                    value="">
-                        <!--</form>-->
                         <div class="blue-line"></div>
                     </div>
                 </div><!-- /.row -->
@@ -100,13 +98,11 @@
             <?php if(!isset($_POST['warehouse_id']) || ($error)): ?>
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3 text-center">
-                        <!--<form>-->
                             <h2>Enter Warehouse ID:</h2>
                             <input class="form-control input-sm"
                                    type="text"
                                    name="warehouse_id"
                                    value="">
-                        <!--</form>-->
                         <div class="blue-line"></div>
                     </div>
                 </div><!-- /.row -->
