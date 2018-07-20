@@ -140,6 +140,22 @@
         <div class="alert alert-danger text-center" role="alert"><?= $error; ?></div>
 
     <?php else: ?>
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Total Available Stock</th>
+                <th>Total Allocated Stock</th>
+            </tr>
+            <?php foreach ($products as $product): ?>
+                <tr>
+                    <th><?= $product['title'] ?></th>
+                    <th><?= $product['total_available_stock_level'] ?></th>
+                    <th><?= $product['total_allocated_stock_level'] ?></th>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+
+
         <?php foreach (array_chunk($products, 4) as $group): ?>
             <div class="row text-center">
                 <?php foreach ($group as $product): ?>
