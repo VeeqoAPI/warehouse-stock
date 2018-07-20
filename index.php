@@ -43,7 +43,7 @@
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Veeqo Dashboard</a>
+            <a class="navbar-brand" href="#">Veeqo Warehouse Stock</a>
         </div>
 
     </div>
