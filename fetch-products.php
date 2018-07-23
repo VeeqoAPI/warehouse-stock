@@ -5,11 +5,11 @@ $warehouse_id = htmlentities($_POST[ 'warehouse_id']);
 
 function prepare_products($response) {
     $products = $response;
-    foreach ($products as $index => $product) {
-        $products[$index] = array_merge([
-            'infoUrl' => '#'
-        ], $product);
-    }
+//    foreach ($products as $index => $product) {
+//        $products[$index] = array_merge([
+//            'infoUrl' => '#'
+//        ], $product);
+//    }
     return $products;
 }
 
@@ -75,7 +75,10 @@ $response = json_decode($response, true);
 $body = json_decode($body,true);
 $headers_arr = http_parse_headers($headers);
 
-//echo ("\n\nBody[0][title]: ".$body[0]['title']);
+echo ("\n\nBody[0][title]: ".$body[0]['title']);
+echo ("\n\nBody: ".$body);
+echo ("\n\nBody[0][sellables][0][product_title]: ".$body[0]['sellables'][0]['product_title']);
+echo ("\n\nBody[0][sellables][0][stock_entries][0][warehouse_id]: ".$body[0]['sellables'][0]['stock_entries'][0]['warehouse_id']);
 //echo ("\n\nX-Total-Count: ".$headers_arr['X-Total-Count']);
 
 $results = [
