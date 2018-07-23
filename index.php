@@ -75,8 +75,8 @@
         <form id="fetch_warehouse_stock" action="index.php" method="post">
 
             <?php if(!isset($_POST['api-key']) || ($error)): ?>
-                <div class="row text-center">
-                    <div class="col-md-6 col-md-offset-3 text-center">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center">
                             <h2>Enter your API key:</h2>
                             <input class="form-control input-sm"
                                    type="text"
@@ -89,8 +89,8 @@
 
             <?php if(isset($_POST['api-key']) && (!$error)): ?>
 
-                <div class="row text-center">
-                    <div class="col-md-6 col-md-offset-3 text-center">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center">
                         <h2>Your API Key: </h2>
                         <h3><?php echo $api_key ?></h3>
                         <div class="blue-line"></div>
@@ -100,8 +100,8 @@
             <?php endif; ?>
 
             <?php if(!isset($_POST['warehouse_id']) || ($error)): ?>
-                <div class="row text-center">
-                    <div class="col-md-6 col-md-offset-3 text-center">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center">
                             <h2>Enter Warehouse ID:</h2>
                             <input class="form-control input-sm"
                                    type="text"
@@ -113,8 +113,8 @@
             <?php endif; ?>
 
             <?php if(isset($_POST['warehouse_id']) && (!$error)): ?>
-                <div class="row text-center">
-                    <div class="col-md-6 col-md-offset-3 text-center">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center">
                         <h2>Warehouse Name: </h2>
                         <h3><?php echo $warehouse['name'] ?></h3>
                         <div class="blue-line"></div>
