@@ -142,7 +142,7 @@
                 <div class="text-center">
                     <div>
                         <label for="page_size">Products per Page: </label>
-                        <select id="page_size" name="page_size">
+                        <select id="page_size" name="page_size" type="submit">
                             <option value="10" <?php if (isset($page_size) && $page_size==10) echo("selected");?>>10</option>
                             <option value="25" <?php if (isset($page_size) && $page_size==25) echo("selected");?>>25</option>
                             <option value="50" <?php if (isset($page_size) && $page_size==50) echo("selected");?>>50</option>
@@ -179,7 +179,8 @@
                             </ul>
                         </div>
                     <div>
-                       <p><?php echo $page_count ?></p>
+                        <p><?php echo $page_count ?></p>
+                        <p><?php echo $page ?></p>
                     </div>
                 <?php endif; ?>
             <?php endif; ?>
