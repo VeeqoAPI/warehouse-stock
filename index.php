@@ -142,16 +142,28 @@
     <?php else: ?>
         <table>
             <tr>
-                <th>Title</th>
-                <th>Total Available Stock</th>
-                <th>Total Allocated Stock</th>
+                <th>Product Title</th>
+                <th>Sellable Title</th>
+                <th>Total Quantity Sold</th>
+                <th>Physical Stock Level</th>
+                <th>Allocated Stock Level</th>
+                <th>Available Stock Level</th>
             </tr>
             <?php foreach ($products as $product): ?>
-                <tr>
-                    <th><?= $product['title'] ?></th>
-                    <th><?= $product['total_available_stock_level'] ?></th>
-                    <th><?= $product['total_allocated_stock_level'] ?></th>
-                </tr>
+                <?php foreach ($sellables as $sellable): ?>
+                    <tr>
+                        <th><?= $sellable['product_title'] ?></th>
+                        <th><?= $sellable['sellable_title'] ?></th>
+                        <th><?= $sellable['total_quantity_sold"'] ?></th>
+                        <?php foreach ($stock_entries as $stock_entry): ?>
+                            <?php if ($stock_entry['warehouse_id'] == $warehouse_id): ?>
+                                <th><?= $stock_entry['physical_stock_level'] ?></th>
+                                <th><?= $stock_entry['allocated_stock_level'] ?></th>
+                                <th><?= $stock_entry['available_stock_level'] ?></th>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </tr>
+                <?php endforeach; ?>
             <?php endforeach; ?>
         </table>
 
