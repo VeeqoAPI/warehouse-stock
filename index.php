@@ -81,7 +81,7 @@
                             <input class="form-control input-sm"
                                    type="text"
                                    name="api-key"
-                                   value="">
+                                   value="<?php if(isset($_POST['api-key'])): echo $api_key?>">
                         <div class="blue-line"></div>
                     </div>
                 </div><!-- /.row -->
@@ -106,7 +106,7 @@
                             <input class="form-control input-sm"
                                    type="text"
                                    name="warehouse_id"
-                                   value="">
+                                   value="<?php if(isset($_POST['warehouse_id'])): echo $warehouse_id?>">
                         <div class="blue-line"></div>
                     </div>
                 </div><!-- /.row -->
@@ -127,10 +127,10 @@
                 <div class="text-center">
                     <p>Products per Page</p>
                     <select name="page_size">
-                        <option value="10">10</option>
-                        <option value="25">25</option>
-                        <option value="50">50</option>
-                        <option value="100" selected>100</option>
+                        <option value="10" <?php selected( isset($_POST['page_size']) ? $_POST['page_size'] : '', '10' ); ?>>10</option>
+                        <option value="25" <?php selected( isset($_POST['page_size']) ? $_POST['page_size'] : '', '25' ); ?>>25</option>
+                        <option value="50" <?php selected( isset($_POST['page_size']) ? $_POST['page_size'] : '', '50' ); ?>>50</option>
+                        <option value="100" <?php selected( isset($_POST['page_size']) ? $_POST['page_size'] : '', '100' ); ?>>100</option>
                     </select>
                 </div>
                 <div class="text-center">
