@@ -152,6 +152,7 @@
             </tr>
             <?php foreach ($products as $product): ?>
                 <?php foreach ($sellables as $sellable): ?>
+                    <?php print_r($sellables); ?>
                     <tr>
                         <th>test <?= $product['title'] ?></th>
                         <th><?= $sellable['product_title'] ?></th>
