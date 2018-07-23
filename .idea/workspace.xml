@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74a9fc7a-ccd0-43b1-a1c9-0c9015d0e2bd" name="Default" comment="" />
+    <list default="true" id="74a9fc7a-ccd0-43b1-a1c9-0c9015d0e2bd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/fetch-products.php" beforeDir="false" afterPath="$PROJECT_DIR$/fetch-products.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="145" column="48" selection-start-line="145" selection-start-column="48" selection-end-line="145" selection-end-column="48" />
+            <state relative-caret-position="-282">
+              <caret line="147" column="19" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -26,17 +28,17 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="773">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="795">
+              <caret line="59" column="21" lean-forward="true" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fetch-products.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="fetch-products.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fetch-products.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="80" column="7" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="67" />
+            <state relative-caret-position="1215">
+              <caret line="81" selection-start-line="77" selection-end-line="81" />
             </state>
           </provider>
         </entry>
@@ -50,9 +52,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/fetch-dashboard.php" />
+        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/main.css" />
         <option value="$PROJECT_DIR$/fetch-products.php" />
-        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -124,12 +126,12 @@
       <updated>1532009184123</updated>
       <workItem from="1532009186968" duration="3773000" />
       <workItem from="1532101515424" duration="6581000" />
-      <workItem from="1532332953876" duration="4247000" />
+      <workItem from="1532332953876" duration="4548000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33000000" />
+    <option name="totallyTimeSpent" value="33301000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="442" y="-11" width="2497" height="1452" extended-state="6" />
@@ -239,24 +241,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fetch-products.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="80" column="7" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="67" />
+        <state relative-caret-position="-282">
+          <caret line="147" column="19" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="773">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="795">
+          <caret line="59" column="21" lean-forward="true" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/fetch-products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="145" column="48" selection-start-line="145" selection-start-column="48" selection-end-line="145" selection-end-column="48" />
+        <state relative-caret-position="1215">
+          <caret line="81" selection-start-line="77" selection-end-line="81" />
         </state>
       </provider>
     </entry>

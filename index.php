@@ -206,6 +206,7 @@
                 <p>API request took <?= $time ?>s, response
                     size <?= $responseSize ?> bytes</p>
                 <p>API Reponse Code: <?= $responseCode ?></p>
+                <p>Total Products: <?= $headers_arr['X-Total-Count'] ?></p>
                 <p> &copy; Veeqo 2018 Ltd</p>
             </div>
         </div>
