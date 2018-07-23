@@ -125,6 +125,7 @@
 
             <?php if(!isset($_POST['warehouse_id']) || !isset($_POST['api-key']) || ($error)): ?>
                 <div class="text-center">
+                    <p>Products per Page</p>
                     <select name="page_size">
                         <option value="10">10</option>
                         <option value="25">25</option>
