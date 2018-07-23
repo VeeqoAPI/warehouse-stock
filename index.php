@@ -153,7 +153,7 @@
                     <input type="hidden"  name="warehouse_id" value="<?php echo $warehouse_id ?>">
 <!--                    <input class="btn btn-danger" type="submit" value="Clear Values" />-->
                     <input class="btn btn-success" type="submit" value="Refresh" />
-                    <input class="btn btn-danger" type="button" value="Clear Values" onclick="window.location.href ='#'" />
+                    <input class="btn btn-danger" type="button" value="Clear Values" onclick="window.location.href='https://veeqo-warehouse-stock.herokuapp.com/index.php'" />
                 </div>
                 <?php if($headers_arr['X-Total-Count']>$page_size): ?>
                     <?php $page_count = ceil($headers_arr['X-Total-Count']/$page_size) ?>
