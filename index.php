@@ -215,8 +215,9 @@
 
 
         <?php foreach (array_chunk($products, 4) as $group): ?>
+            <div class="blue-line"></div>
             <div class="row">
-                <div class="blue-line"></div>
+
                 <?php foreach ($group as $product): ?>
                     <div class="col-md-3 col-sm-6 hero-feature">
                         <div class="card">
