@@ -124,7 +124,7 @@
             <?php endif; ?>
 
             <?php if(!isset($_POST['warehouse_id']) || !isset($_POST['api-key']) || ($error)): ?>
-                <div class="text-center">
+                <div class="text-center form-inline">
                     <p>Products per Page</p>
                     <select name="page_size">
                         <option value="10">10</option>
@@ -140,20 +140,25 @@
 
             <?php if(isset($_POST['warehouse_id']) && isset($_POST['api-key']) && (!$error)): ?>
                 <div class="text-center">
-                    <select name="page_size">
-                        <option value="10">10</option>
-                        <option value="25">25</option>
-                        <option value="50">50</option>
-                        <option value="100" selected>100</option>
-                    </select>
+                    <div class="text-center form-inline">
+                        <p>Products per Page</p>
+                        <select name="page_size">
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100" selected>100</option>
+                        </select>
+                    </div>
                     <input type="hidden"  name="api-key" value="<?php echo $api_key ?>">
                     <input type="hidden"  name="warehouse_id" value="<?php echo $warehouse_id ?>">
-                    <input class="btn btn-success" type="button" value="Refresh Page" onclick="window.location.reload(true)" />
-                    <input class="btn btn-danger" type="submit" value="Clear Values" />
+<!--                    <input class="btn btn-success" type="button" value="Refresh Page" onclick="window.location.reload(true)" />-->
+<!--                    <input class="btn btn-danger" type="submit" value="Clear Values" />-->
+                    <input class="btn btn-primary veeqo-background" type="submit" value="Refresh" />
                 </div>
                 <?php if($headers_arr['X-Total-Count']>$page_size): ?>
+                    <?php $page_count = $headers_arr['X-Total-Count']/$page_size ?>
                     <div>
-                       <p>Test Here</p>
+                       <p><?php echo $page_count ?></p>
                     </div>
                 <?php endif; ?>
             <?php endif; ?>
