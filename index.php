@@ -157,27 +157,17 @@
                 </div>
                 <?php if($headers_arr['X-Total-Count']>$page_size): ?>
                     <?php $page_count = ceil($headers_arr['X-Total-Count']/$page_size) ?>
-                        <div class="text-center">
+                        <nav class="text-center">
                             <ul class="pagination justify-content-center">
-                                <!--<li class="page-item">
-                                    <input name="page" class="page-link" value="<?php /*echo($page-1)*/?>" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                        <span class="sr-only">Previous</span>
-                                    </input>
-                                </li>-->
                                 <?php for ($i=1; $i<=$page_count; $i++): ?>
                                     <li class="<?php if ($i==$page) echo("active"); ?>">
-                                        <input type="submit" name="page" class="page-link" value="<?php echo($i) ?>" />
+                                        <a>
+                                            <input type="submit" name="page" class="page-link" value="<?php echo($i) ?>" />
+                                        </a>
                                     </li>
                                 <?php endfor; ?>
-                                <!--<li class="page-item">
-                                    <input name="page" class="page-link" value="<?php /*echo($page+1)*/?>" aria-label="Previous">
-                                    <span aria-hidden="true">&raquo;</span>
-                                    <span class="sr-only">Previous</span>
-                                    </input>
-                                </li>-->
                             </ul>
-                        </div>
+                        </nav>
                     <div>
                         <p><?php echo $page_count ?></p>
                         <p><?php echo $page ?></p>
