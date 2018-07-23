@@ -4,7 +4,6 @@
 }
 body {
     font-family: 'Brandon_light', Arial, sans-serif;
-
 }
 
 h2 {
@@ -26,7 +25,7 @@ h4 {
     color: #363737;
 }
 
-.box {
+/*.box {
     border-color: #6e8196;
     border: 1px solid;
     background-color: #f8f9fa;
@@ -38,7 +37,7 @@ h4 {
 .box:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 1s ease;
-}
+}*/
 
 .blue-line {
     background-color: #009aed;
@@ -66,4 +65,8 @@ select {
 
 .pagination {
     margin: 10px;
+}
+
+.thumbnail {
+    max-width: inherit;
 }

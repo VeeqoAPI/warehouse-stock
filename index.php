@@ -75,7 +75,7 @@
         <form id="fetch_warehouse_stock" action="index.php" method="post">
 
             <?php if(!isset($_POST['api-key']) || ($error)): ?>
-                <div class="row">
+                <div class="row text-center">
                     <div class="col-md-6 col-md-offset-3 text-center">
                             <h2>Enter your API key:</h2>
                             <input class="form-control input-sm"
@@ -89,7 +89,7 @@
 
             <?php if(isset($_POST['api-key']) && (!$error)): ?>
 
-                <div class="row">
+                <div class="row text-center">
                     <div class="col-md-6 col-md-offset-3 text-center">
                         <h2>Your API Key: </h2>
                         <h3><?php echo $api_key ?></h3>
@@ -100,7 +100,7 @@
             <?php endif; ?>
 
             <?php if(!isset($_POST['warehouse_id']) || ($error)): ?>
-                <div class="row">
+                <div class="row text-center">
                     <div class="col-md-6 col-md-offset-3 text-center">
                             <h2>Enter Warehouse ID:</h2>
                             <input class="form-control input-sm"
@@ -113,7 +113,7 @@
             <?php endif; ?>
 
             <?php if(isset($_POST['warehouse_id']) && (!$error)): ?>
-                <div class="row">
+                <div class="row text-center">
                     <div class="col-md-6 col-md-offset-3 text-center">
                         <h2>Warehouse Name: </h2>
                         <h3><?php echo $warehouse['name'] ?></h3>
@@ -124,7 +124,7 @@
             <?php endif; ?>
 
             <?php if(!isset($_POST['warehouse_id']) || !isset($_POST['api-key']) || ($error)): ?>
-                <div class="text-center">
+                <div class="text-center form-group">
                     <label for="page_size">Products per Page: </label>
                     <select id="page_size" name="page_size">
                         <option value="10">10</option>
@@ -140,7 +140,7 @@
 
             <?php if(isset($_POST['warehouse_id']) && isset($_POST['api-key']) && (!$error)): ?>
                 <div class="text-center">
-                    <div>
+                    <div class="form-group">
                         <label for="page_size">Products per Page: </label>
                         <select id="page_size" name="page_size" type="submit">
                             <option value="10" <?php if (isset($page_size) && $page_size==10) echo("selected");?>>10</option>
@@ -160,7 +160,7 @@
                         <nav class="text-center">
                             <ul class="pagination justify-content-center">
                                 <?php for ($i=1; $i<=$page_count; $i++): ?>
-                                    <li class="<?php if ($i==$page) echo("active"); ?>">
+                                    <li class="page-item <?php if ($i==$page) echo("active"); ?>">
                                         <input type="submit" name="page" class="page-link" value="<?php echo($i) ?>" />
                                     </li>
                                 <?php endfor; ?>
