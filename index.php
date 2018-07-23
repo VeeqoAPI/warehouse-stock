@@ -142,6 +142,7 @@
     <?php else: ?>
         <table>
             <tr>
+                <th>Test</th>
                 <th>Product Title</th>
                 <th>Sellable Title</th>
                 <th>Total Quantity Sold</th>
@@ -152,6 +153,7 @@
             <?php foreach ($products as $product): ?>
                 <?php foreach ($sellables as $sellable): ?>
                     <tr>
+                        <th>test <?= $product['title'] ?></th>
                         <th><?= $sellable['product_title'] ?></th>
                         <th><?= $sellable['sellable_title'] ?></th>
                         <th><?= $sellable['total_quantity_sold"'] ?></th>
