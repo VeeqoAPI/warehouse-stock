@@ -63,3 +63,7 @@ th {
 select {
     margin: 5px;
 }
+
+.pagination {
+    margin: 10px;
+}
