@@ -146,7 +146,7 @@
         <h3>products</h3>
         <?php print_r($products); ?>
         <h3>products[0]sellables</h3>
-        <?php print_r($products[0][$sellables]); ?>
+        <?php print_r($products[0]['sellables']); ?>
 
 
         <table>
