@@ -166,7 +166,7 @@
                                     </input>
                                 </li>-->
                                 <?php for ($i=1; $i<=$page_count; $i++): ?>
-                                    <li class="page-item <?php if($i==$page): ?>active<?php endif; ?>">
+                                    <li class="page-item <?php if ($i==$page) echo(active); ?>">
                                         <input type="submit" name="page" class="page-link" value="<?php echo($i) ?>" />
                                     </li>
                                 <?php endfor; ?>
