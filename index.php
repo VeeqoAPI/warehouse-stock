@@ -143,10 +143,10 @@
                     <div>
                         <label for="page_size">Products per Page: </label>
                         <select id="page_size" name="page_size">
-                            <option value="10" <?php if (isset($page_size) && $page_size==10) echo(selected);?>>10</option>
-                            <option value="25" <?php if (isset($page_size) && $page_size==25) echo(selected);?>>25</option>
-                            <option value="50" <?php if (isset($page_size) && $page_size==50) echo(selected);?>>50</option>
-                            <option value="100" <?php if (isset($page_size) && $page_size==100) echo(selected);?>>100</option>
+                            <option value="10" <?php if (isset($page_size) && $page_size==10) echo("selected");?>>10</option>
+                            <option value="25" <?php if (isset($page_size) && $page_size==25) echo("selected");?>>25</option>
+                            <option value="50" <?php if (isset($page_size) && $page_size==50) echo("selected");?>>50</option>
+                            <option value="100" <?php if (isset($page_size) && $page_size==100) echo("selected");?>>100</option>
                         </select>
                     </div>
                     <input type="hidden"  name="api-key" value="<?php echo $api_key ?>">
@@ -165,9 +165,11 @@
                                         <span class="sr-only">Previous</span>
                                     </input>
                                 </li>-->
-                                <?php for ($i=1; $i<=$page_count; $i++) {
-                                    echo ('<li class="page-item"><input type="submit" name="page" class="page-link" value="'.$i.'" /></li>');
-                                } ?>
+                                <?php for ($i=1; $i<=$page_count; $i++): ?>
+                                    <li class="page-item <?php if($i==$page): ?>active<?php endif; ?>">
+                                        <input type="submit" name="page" class="page-link" value="<?php echo($i) ?>" />
+                                    </li>
+                                <?php endfor; ?>
                                 <!--<li class="page-item">
                                     <input name="page" class="page-link" value="<?php /*echo($page+1)*/?>" aria-label="Previous">
                                     <span aria-hidden="true">&raquo;</span>
