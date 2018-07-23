@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74a9fc7a-ccd0-43b1-a1c9-0c9015d0e2bd" name="Default" comment="" />
+    <list default="true" id="74a9fc7a-ccd0-43b1-a1c9-0c9015d0e2bd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main.css" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +20,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="252" column="6" lean-forward="true" selection-start-line="252" selection-start-column="6" selection-end-line="252" selection-end-column="6" />
+            <state relative-caret-position="393">
+              <caret line="217" column="29" selection-start-line="217" selection-start-column="29" selection-end-line="217" selection-end-column="29" />
               <folding>
                 <element signature="e#11617#11623#0#HTML" expanded="true" />
               </folding>
@@ -54,8 +57,8 @@
       <list>
         <option value="$PROJECT_DIR$/fetch-dashboard.php" />
         <option value="$PROJECT_DIR$/fetch-products.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/main.css" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -132,7 +135,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48218000" />
+    <option name="totallyTimeSpent" value="48493000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="442" y="-11" width="2497" height="1452" extended-state="6" />
@@ -548,8 +551,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="252" column="6" lean-forward="true" selection-start-line="252" selection-start-column="6" selection-end-line="252" selection-end-column="6" />
+        <state relative-caret-position="393">
+          <caret line="217" column="29" selection-start-line="217" selection-start-column="29" selection-end-line="217" selection-end-column="29" />
           <folding>
             <element signature="e#11617#11623#0#HTML" expanded="true" />
           </folding>

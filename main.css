@@ -66,8 +66,3 @@ select {
 .pagination {
     margin: 10px;
 }
-
-.thumbnail img{
-    max-width: inherit;
-    height:auto;
-}

@@ -213,17 +213,15 @@
             </tbody>
         </table>
 
-
+        <div class="blue-line"></div>
         <?php foreach (array_chunk($products, 4) as $group): ?>
-            <div class="blue-line"></div>
             <div class="row">
-
                 <?php foreach ($group as $product): ?>
-                    <div class="col-md-3 col-sm-6 hero-feature">
+                    <div class="col-md-3 col-sm-6">
                         <div class="card">
-                            <img src="<?= isset($product['image']) ? $product['image'] : 'http://placehold.it/800x500' ?>" alt="">
-                            <div class="caption">
-                                <h3><?= $product['title'] ?></h3>
+                            <img class="card-img-top" src="<?= isset($product['image']) ? $product['image'] : 'http://placehold.it/800x500' ?>" alt="">
+                            <div class="card-body">
+                                <h3 class="card-title"><?= $product['title'] ?></h3>
 <!--                                <p>--><?//= $product['description'] ?><!--</p>-->
                                 <p>Total Available Stock: <?= $product['total_available_stock_level'] ?></p>
                                 <p>Total Allocated Stock: <?= $product['total_allocated_stock_level'] ?></p>
