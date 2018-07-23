@@ -136,6 +136,10 @@
             <?php endif; ?>
 
             <?php if(isset($_POST['warehouse_id']) && isset($_POST['api-key']) && (!$error)): ?>
+                <?php $api_key = htmlentities($_POST['api-key']); ?>
+                <?php $warehouse_id = htmlentities($_POST['warehouse_id']); ?>
+                <?php $page_size = htmlentities($_POST['page_size']); ?>
+                <?php $page = htmlentities($_POST['page']); ?>
                 <div class="text-center">
                     <input class="btn btn-success" type="button" value="Refresh Page" onclick="window.location.reload(true)" />
                     <input class="btn btn-danger" type="submit" value="Clear Values" />
