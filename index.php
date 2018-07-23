@@ -81,7 +81,7 @@
                             <input class="form-control input-sm"
                                    type="text"
                                    name="api-key"
-                                   value="<?php if(isset($_POST['api-key'])): echo $api_key?>">
+                                   value="<?php// if(isset($_POST['api-key'])): echo $api_key?>">
                         <div class="blue-line"></div>
                     </div>
                 </div><!-- /.row -->
