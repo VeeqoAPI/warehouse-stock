@@ -139,7 +139,16 @@
     <?php if ($error): ?>
         <div class="alert alert-danger text-center" role="alert"><?= $error; ?></div>
 
+
+
     <?php else: ?>
+
+        <h3>products</h3>
+        <?php print_r($products); ?>
+        <h3>products[0]sellables</h3>
+        <?php print_r($products[0][$sellables]); ?>
+
+
         <table>
             <tr>
                 <th>Test</th>
