@@ -151,7 +151,6 @@
 
         <table>
             <tr>
-                <th>Test</th>
                 <th>Product Title</th>
                 <th>Sellable Title</th>
                 <th>Total Quantity Sold</th>
@@ -161,13 +160,11 @@
             </tr>
             <?php foreach ($products as $product): ?>
                 <?php foreach ($product['sellables'] as $sellable): ?>
-                    here1<?php print_r($sellable); ?>
                     <tr>
-                        <th>test <?= $product['title'] ?></th>
                         <th><?= $sellable['product_title'] ?></th>
                         <th><?= $sellable['sellable_title'] ?></th>
                         <th><?= $sellable['total_quantity_sold"'] ?></th>
-                        <?php foreach ($stock_entries as $stock_entry): ?>
+                        <?php foreach ($sellable['stock_entries'] as $stock_entry): ?>
                             <?php if ($stock_entry['warehouse_id'] == $warehouse_id): ?>
                                 <th><?= $stock_entry['physical_stock_level'] ?></th>
                                 <th><?= $stock_entry['allocated_stock_level'] ?></th>
