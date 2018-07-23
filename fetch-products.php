@@ -2,6 +2,8 @@
 
 $api_key = htmlentities($_POST['api-key']);
 $warehouse_id = htmlentities($_POST[ 'warehouse_id']);
+$page_size = htmlentities($_POST['page_size']);
+$page = htmlentities($_POST['page']);
 
 function prepare_products($response) {
     $products = $response;
@@ -49,7 +51,7 @@ curl_close($ch);
 
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.veeqo.com/products?warehouse_id=".$warehouse_id."&page_size=100");
+curl_setopt($ch, CURLOPT_URL, "https://api.veeqo.com/products?warehouse_id=".$warehouse_id."&page_size=".$page_size."&page="."1");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, TRUE);
 
