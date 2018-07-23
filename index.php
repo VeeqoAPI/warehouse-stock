@@ -166,10 +166,6 @@
                                 <?php endfor; ?>
                             </ul>
                         </nav>
-                    <div>
-                        <p><?php echo $page_count ?></p>
-                        <p><?php echo $page ?></p>
-                    </div>
                 <?php endif; ?>
             <?php endif; ?>
 
@@ -219,7 +215,7 @@
 
 
         <?php foreach (array_chunk($products, 4) as $group): ?>
-            <div class="row text-center">
+            <div class="row">
                 <div class="blue-line"></div>
                 <?php foreach ($group as $product): ?>
                     <div class="col-md-3 col-sm-6 hero-feature">
