@@ -143,12 +143,6 @@
 
     <?php else: ?>
 
-        <h3>products</h3>
-        <?php print_r($products); ?>
-        <h3>products[0]sellables</h3>
-        <?php print_r($products[0]['sellables']); ?>
-
-
         <table>
             <tr>
                 <th>Product Title</th>
@@ -163,7 +157,7 @@
                     <tr>
                         <th><?= $sellable['product_title'] ?></th>
                         <th><?= $sellable['sellable_title'] ?></th>
-                        <th><?= $sellable['total_quantity_sold"'] ?></th>
+                        <th><?= $sellable['total_quantity_sold'] ?></th>
                         <?php foreach ($sellable['stock_entries'] as $stock_entry): ?>
                             <?php if ($stock_entry['warehouse_id'] == $warehouse_id): ?>
                                 <th><?= $stock_entry['physical_stock_level'] ?></th>
