@@ -55,3 +55,7 @@ h4 {
 .alert {
     margin: 5px;
 }
+
+th {
+    font-weight: 500;
+}
