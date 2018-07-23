@@ -143,15 +143,18 @@
 
     <?php else: ?>
 
-        <table>
-            <tr>
-                <th>Product Title</th>
-                <th>Sellable Title</th>
-                <th>Total Quantity Sold</th>
-                <th>Physical Stock Level</th>
-                <th>Allocated Stock Level</th>
-                <th>Available Stock Level</th>
-            </tr>
+        <table class="table table-hover table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">Product Title</th>
+                    <th scope="col">Sellable Title</th>
+                    <th scope="col">Total Quantity Sold</th>
+                    <th scope="col">Physical Stock Level</th>
+                    <th scope="col">Allocated Stock Level</th>
+                    <th scope="col">Available Stock Level</th>
+                </tr>
+            </thead>
+            <tbody>
             <?php foreach ($products as $product): ?>
                 <?php foreach ($product['sellables'] as $sellable): ?>
                     <tr>
@@ -168,6 +171,7 @@
                     </tr>
                 <?php endforeach; ?>
             <?php endforeach; ?>
+            </tbody>
         </table>
 
 
