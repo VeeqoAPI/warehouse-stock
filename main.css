@@ -59,3 +59,7 @@ h4 {
 th {
     font-weight: 500;
 }
+
+select {
+    margin: 5px;
+}
