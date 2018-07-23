@@ -160,8 +160,8 @@
                 <th>Available Stock Level</th>
             </tr>
             <?php foreach ($products as $product): ?>
-                <?php foreach ($sellables as $sellable): ?>
-                    <?php print_r($sellables); ?>
+                <?php foreach ($product['sellables'] as $sellable): ?>
+                    here1<?php print_r($sellable); ?>
                     <tr>
                         <th>test <?= $product['title'] ?></th>
                         <th><?= $sellable['product_title'] ?></th>
