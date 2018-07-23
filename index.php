@@ -123,7 +123,7 @@
 
             <?php if(!isset($_POST['warehouse_id']) || !isset($_POST['api-key']) || ($error)): ?>
                 <div class="text-center">
-                    <select name="page_size">
+                    <select class="custom-select" name="page_size">
                         <option value="10">10</option>
                         <option value="25">25</option>
                         <option value="50">50</option>
