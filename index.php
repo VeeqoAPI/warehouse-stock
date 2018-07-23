@@ -140,7 +140,7 @@
 
             <?php if(isset($_POST['warehouse_id']) && isset($_POST['api-key']) && (!$error)): ?>
                 <div class="text-center">
-                    <div class="text-center">
+                    <div>
                         <label for="page_size">Products per Page: </label>
                         <select id="page_size" name="page_size">
                             <option value="10">10</option>
@@ -151,13 +151,31 @@
                     </div>
                     <input type="hidden"  name="api-key" value="<?php echo $api_key ?>">
                     <input type="hidden"  name="warehouse_id" value="<?php echo $warehouse_id ?>">
-
 <!--                    <input class="btn btn-danger" type="submit" value="Clear Values" />-->
                     <input class="btn btn-success" type="submit" value="Refresh" />
                     <input class="btn btn-danger" type="button" value="Clear Values" onclick="window.location.`#`" />
                 </div>
                 <?php if($headers_arr['X-Total-Count']>$page_size): ?>
                     <?php $page_count = ceil($headers_arr['X-Total-Count']/$page_size) ?>
+                        <div class="text-center">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <input name="page" class="page-link" value="<?php echo $page-1?>" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                        <span class="sr-only">Previous</span>
+                                    </input>
+                                </li>
+                                <?php for ($i=1; $i<=$page_count; $i++) {
+                                    echo ('<li class="page-item"><input name="page" class="page-link" value="'.$i.'">'.$i.'</input></li>');
+                                } ?>
+                                <li class="page-item">
+                                    <input name="page" class="page-link" value="<?php echo $page+1?>" aria-label="Previous">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                    </input>
+                                </li>
+                            </ul>
+                        </div>
                     <div>
                        <p><?php echo $page_count ?></p>
                     </div>
