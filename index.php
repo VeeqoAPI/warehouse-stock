@@ -124,9 +124,9 @@
             <?php endif; ?>
 
             <?php if(!isset($_POST['warehouse_id']) || !isset($_POST['api-key']) || ($error)): ?>
-                <div class="text-center form-inline">
-                    <p>Products per Page</p>
-                    <select name="page_size">
+                <div class="text-center">
+                    <label for="page_size">Products per Page: </label>
+                    <select id="page_size" name="page_size">
                         <option value="10">10</option>
                         <option value="25">25</option>
                         <option value="50">50</option>
@@ -140,9 +140,9 @@
 
             <?php if(isset($_POST['warehouse_id']) && isset($_POST['api-key']) && (!$error)): ?>
                 <div class="text-center">
-                    <div class="text-center form-inline">
-                        <p>Products per Page</p>
-                        <select name="page_size">
+                    <div class="text-center">
+                        <label for="page_size">Products per Page: </label>
+                        <select id="page_size" name="page_size">
                             <option value="10">10</option>
                             <option value="25">25</option>
                             <option value="50">50</option>
@@ -156,7 +156,7 @@
                     <input class="btn btn-primary veeqo-background" type="submit" value="Refresh" />
                 </div>
                 <?php if($headers_arr['X-Total-Count']>$page_size): ?>
-                    <?php $page_count = $headers_arr['X-Total-Count']/$page_size ?>
+                    <?php $page_count = ceil($headers_arr['X-Total-Count']/$page_size) ?>
                     <div>
                        <p><?php echo $page_count ?></p>
                     </div>

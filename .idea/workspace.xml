@@ -19,8 +19,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="768">
-              <caret line="159" column="55" lean-forward="true" selection-start-line="159" selection-start-column="55" selection-end-line="159" selection-end-column="55" />
+            <state relative-caret-position="292">
+              <caret line="126" column="39" selection-start-line="126" selection-start-column="39" selection-end-line="126" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -126,15 +126,16 @@
       <updated>1532009184123</updated>
       <workItem from="1532009186968" duration="3773000" />
       <workItem from="1532101515424" duration="6581000" />
-      <workItem from="1532332953876" duration="10826000" />
+      <workItem from="1532332953876" duration="11391000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39579000" />
+    <option name="totallyTimeSpent" value="40144000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="442" y="-11" width="2497" height="1452" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1246493" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -257,8 +258,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="159" column="55" lean-forward="true" selection-start-line="159" selection-start-column="55" selection-end-line="159" selection-end-column="55" />
+        <state relative-caret-position="292">
+          <caret line="126" column="39" selection-start-line="126" selection-start-column="39" selection-end-line="126" selection-end-column="39" />
         </state>
       </provider>
     </entry>
