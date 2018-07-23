@@ -67,6 +67,7 @@
 
     <?php $api_key = htmlentities($_POST['api-key']); ?>
     <?php $warehouse_id = htmlentities($_POST['warehouse_id']); ?>
+    <?php $page_size = htmlentities($_POST['page_size']); ?>
     <?php $page = htmlentities($_POST['page']); ?>
 
         <form id="fetch_warehouse_stock" action="index.php" method="post">
@@ -122,6 +123,14 @@
 
             <?php if(!isset($_POST['warehouse_id']) || !isset($_POST['api-key']) || ($error)): ?>
                 <div class="text-center">
+                    <select name="page_size">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100" selected>100</option>
+                    </select>
+                </div>
+                <div class="text-center">
                     <input class="btn btn-primary veeqo-background" type="submit" value="Get Products" />
                 </div>
             <?php endif; ?>
@@ -131,7 +140,7 @@
                     <input class="btn btn-success" type="button" value="Refresh Page" onclick="window.location.reload(true)" />
                     <input class="btn btn-danger" type="submit" value="Clear Values" />
                 </div>
-                <?php if($headers_arr['X-Total-Count']>100): ?>
+                <?php if($headers_arr['X-Total-Count']>$page_size): ?>
                     <div>
                        <p>Test Here</p>
                     </div>
