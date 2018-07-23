@@ -67,3 +67,6 @@ select {
     margin: 10px;
 }
 
+.thumbnail img{
+    max-width: inherit;
+}
