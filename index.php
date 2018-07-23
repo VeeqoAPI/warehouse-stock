@@ -81,7 +81,7 @@
                             <input class="form-control input-sm"
                                    type="text"
                                    name="api-key"
-                                   value="<?php// if(isset($_POST['api-key'])): echo $api_key?>">
+                                   value="">
                         <div class="blue-line"></div>
                     </div>
                 </div><!-- /.row -->
@@ -106,7 +106,7 @@
                             <input class="form-control input-sm"
                                    type="text"
                                    name="warehouse_id"
-                                   value="<?php //if(isset($_POST['warehouse_id'])): echo $warehouse_id?>">
+                                   value="">
                         <div class="blue-line"></div>
                     </div>
                 </div><!-- /.row -->
@@ -127,10 +127,10 @@
                 <div class="text-center">
                     <p>Products per Page</p>
                     <select name="page_size">
-                        <option value="10" <?php //if (isset($page_size) && $page_size=="10") echo "selected";?>>10</option>
-                        <option value="25" <?php //if (isset($page_size) && $page_size=="25") echo "selected";?>>25</option>
-                        <option value="50" <?php //if (isset($page_size) && $page_size=="50") echo "selected";?>>50</option>
-                        <option value="100" <?php //if (isset($page_size) && $page_size=="100") echo "selected";?>>100</option>
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100" selected>100</option>
                     </select>
                 </div>
                 <div class="text-center">
@@ -140,6 +140,14 @@
 
             <?php if(isset($_POST['warehouse_id']) && isset($_POST['api-key']) && (!$error)): ?>
                 <div class="text-center">
+                    <select name="page_size">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100" selected>100</option>
+                    </select>
+                    <input type="hidden"  name="api_key" value="<?php echo $api_key ?>">
+                    <input type="hidden"  name="warehouse_id" value="<?php echo $warehouse_id ?>">
                     <input class="btn btn-success" type="button" value="Refresh Page" onclick="window.location.reload(true)" />
                     <input class="btn btn-danger" type="submit" value="Clear Values" />
                 </div>
