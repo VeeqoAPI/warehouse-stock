@@ -124,7 +124,7 @@
             <?php endif; ?>
 
             <?php if(!isset($_POST['warehouse_id']) || !isset($_POST['api-key']) || ($error)): ?>
-                <div class="text-center form-group">
+                <div class="text-center">
                     <label for="page_size">Products per Page: </label>
                     <select id="page_size" name="page_size">
                         <option value="10">10</option>
@@ -139,8 +139,8 @@
             <?php endif; ?>
 
             <?php if(isset($_POST['warehouse_id']) && isset($_POST['api-key']) && (!$error)): ?>
-                <div class="text-center">
-                    <div class="form-group">
+                <div class="text-center form-group">
+                    <div>
                         <label for="page_size">Products per Page: </label>
                         <select id="page_size" name="page_size" type="submit">
                             <option value="10" <?php if (isset($page_size) && $page_size==10) echo("selected");?>>10</option>
@@ -154,10 +154,10 @@
 <!--                    <input class="btn btn-danger" type="submit" value="Clear Values" />-->
                     <input class="btn btn-success" type="submit" value="Refresh" />
                     <input class="btn btn-danger" type="button" value="Clear Values" onclick="window.location.href='https://veeqo-warehouse-stock.herokuapp.com/index.php'" />
-                </div>
+
                 <?php if($headers_arr['X-Total-Count']>$page_size): ?>
                     <?php $page_count = ceil($headers_arr['X-Total-Count']/$page_size) ?>
-                        <nav class="text-center">
+                        <nav>
                             <ul class="pagination justify-content-center">
                                 <?php for ($i=1; $i<=$page_count; $i++): ?>
                                     <li class="page-item <?php if ($i==$page) echo("active"); ?>">
@@ -167,6 +167,7 @@
                             </ul>
                         </nav>
                 <?php endif; ?>
+                </div>
             <?php endif; ?>
 
 
