@@ -61,8 +61,10 @@ th {
 
 select {
     margin: 5px;
+    -webkit-appearance: menulist!important;
 }
 
 .pagination {
     margin: 10px;
 }
+
