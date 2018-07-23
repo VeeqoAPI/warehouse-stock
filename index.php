@@ -67,6 +67,7 @@
 
     <?php $api_key = htmlentities($_POST['api-key']); ?>
     <?php $warehouse_id = htmlentities($_POST['warehouse_id']); ?>
+    <?php $page = htmlentities($_POST['page']); ?>
 
         <form id="fetch_warehouse_stock" action="index.php" method="post">
 
@@ -126,11 +127,18 @@
             <?php endif; ?>
 
             <?php if(isset($_POST['warehouse_id']) && isset($_POST['api-key']) && (!$error)): ?>
-            <div class="text-center">
-                <input class="btn btn-success" type="button" value="Refresh Page" onclick="window.location.reload(true)" />
-                <input class="btn btn-danger" type="submit" value="Clear Values" />
-            </div>
+                <div class="text-center">
+                    <input class="btn btn-success" type="button" value="Refresh Page" onclick="window.location.reload(true)" />
+                    <input class="btn btn-danger" type="submit" value="Clear Values" />
+                </div>
+                <?php if($headers_arr['X-Total-Count']>100): ?>
+                    <div>
+                       <p>Test Here</p>
+                    </div>
+                <?php endif; ?>
             <?php endif; ?>
+
+
 
         </form>
 
