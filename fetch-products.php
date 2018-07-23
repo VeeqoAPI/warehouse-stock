@@ -52,7 +52,7 @@ curl_close($ch);
 
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.veeqo.com/products?warehouse_id=".$warehouse_id."&page_size=".$page_size."&page="."1");
+curl_setopt($ch, CURLOPT_URL, "https://api.veeqo.com/products?warehouse_id=".$warehouse_id."&page_size=".$page_size."&page=".$page);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, TRUE);
 
