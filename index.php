@@ -216,13 +216,13 @@
 
         <div class="blue-line"></div>
         <?php foreach (array_chunk($products, 4) as $group): ?>
-            <div class="row">
+            <row class="card-columns">
                 <?php foreach ($group as $product): ?>
                     <div class="col-md-3 col-sm-6">
                         <div class="card">
                             <img class="card-img-top" src="<?= isset($product['image']) ? $product['image'] : 'http://placehold.it/800x500' ?>" alt="">
-                            <div>
-                                <h3><?= $product['title'] ?></h3>
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $product['title'] ?></h5>
 <!--                                <p>--><?//= $product['description'] ?><!--</p>-->
                                 <p>Total Available Stock: <?= $product['total_available_stock_level'] ?></p>
                                 <p>Total Allocated Stock: <?= $product['total_allocated_stock_level'] ?></p>
@@ -231,7 +231,7 @@
                         </div>
                     </div>
                 <?php endforeach; ?>
-            </div>
+            </row>
             <!-- /.row -->
         <?php endforeach; ?>
     <?php endif; ?>
