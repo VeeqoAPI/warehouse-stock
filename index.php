@@ -218,7 +218,7 @@
         <?php foreach (array_chunk($products, 4) as $group): ?>
             <row class="card-deck">
                 <?php foreach ($group as $product): ?>
-<!--                    <div class="col-md-3 col-sm-6">-->
+                    <div class="col-md-3 col-sm-6">
                         <div class="card">
                             <img class="card-img-top" src="<?= isset($product['image']) ? $product['image'] : 'http://placehold.it/800x500' ?>" alt="">
                             <div class="card-body">
@@ -229,7 +229,7 @@
                                 <p><strong>NOTE: Stock values are from all warehouses.</strong></p>
                             </div>
                         </div>
-<!--                    </div>-->
+                    </div>
                 <?php endforeach; ?>
             </row>
             <!-- /.row -->

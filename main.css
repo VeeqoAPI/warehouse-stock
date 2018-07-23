@@ -68,3 +68,11 @@ select {
     margin: 10px;
 }
 
+.card {
+    margin:0;
+}
+
+.card-body {
+    padding:0.25rem;
+}
+
