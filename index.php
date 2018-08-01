@@ -186,12 +186,13 @@
         <table class="table table-hover table-sm">
             <thead>
                 <tr>
-                    <th scope="col">Product Title</th>
-                    <th scope="col">Sellable Title</th>
-                    <th scope="col">Total Quantity Sold</th>
-                    <th scope="col">Physical Stock Level</th>
-                    <th scope="col">Allocated Stock Level</th>
-                    <th scope="col">Available Stock Level</th>
+                    <th scope="col"><strong>Product Title</strong></th>
+                    <th scope="col"><strong>Sellable Title</strong></th>
+                    <th scope="col"><strong>SKU Code</strong></th>
+                    <th scope="col"><strong>Total Quantity Sold</strong></th>
+                    <th scope="col"><strong>Physical Stock Level</strong></th>
+                    <th scope="col"><strong>Allocated Stock Level</strong></th>
+                    <th scope="col"><strong>Available Stock Level</strong></th>
                 </tr>
             </thead>
             <tbody>
@@ -200,6 +201,7 @@
                     <tr>
                         <th><?= $sellable['product_title'] ?></th>
                         <th><?= $sellable['sellable_title'] ?></th>
+                        <th><?= $sellable['sku_code'] ?></th>
                         <th><?= $sellable['total_quantity_sold'] ?></th>
                         <?php foreach ($sellable['stock_entries'] as $stock_entry): ?>
                             <?php if ($stock_entry['warehouse_id'] == $warehouse_id): ?>
